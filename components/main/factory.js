@@ -3,11 +3,11 @@
 
     var app = angular.module('myApp.factory', ['ngResource',]);
 
-    app.factory("Entity", function($resource) {
-        return $resource("http://localhost/entities/:id", {'id': '@id'},{
+    app.factory("Spotify", function($resource) {
+        return $resource("http://localhost:3000/api/",{},{
             get: {method: 'GET', isArray: false},
             list: {method: 'GET', isArray: true},
-            get_data: {method: 'GET', url:"http://localhost/entities/:id/data", isArray: false},
+            get_current: {method: 'GET', url:"http://localhost:3000/spotify/history", isArray: false},
         });
     });
 })();

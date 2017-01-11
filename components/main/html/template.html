@@ -1,0 +1,26 @@
+
+<div class="row main-page">
+    <div class="col-md-12">
+        <h1>Nothing to Listen</h1>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-3">
+            <!-- <h2>Playlists</h2> -->
+        </div>
+        <div class="col-md-9">
+            <div class="col-md-12">
+                <h2>Recently listened</h2>
+            </div>
+            <div class="col-sm-3 col-md-3" ng-repeat="track in history.track">
+                <div class="thumbnail ntl-thumbnail">
+                    <img ng-src="{{track.image[2]['#text']}}">
+                    <img src="http://placehold.it/300x300" ng-if="!track.image[2]['#text']">
+                    <div class="caption">
+                        <h3>{{track.artist['#text']}}</h3>
+                        <p>{{track.name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
